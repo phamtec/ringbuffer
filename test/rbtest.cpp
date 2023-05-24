@@ -10,7 +10,7 @@
   To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or 
   send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-  https://github.com/visualopsholdings/i2c
+  https://github.com/visualopsholdings/ringbuffer
 */
 
 #define BOOST_AUTO_TEST_MAIN
