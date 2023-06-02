@@ -24,7 +24,7 @@
 //#define RINGBUF_DEBUG
 
 #ifndef RINGBUF_SIZE_MINUS_1
-#define RINGBUF_SIZE_MINUS_1  128
+#define RINGBUF_SIZE_MINUS_1  64
 #endif
 
 class RingBuffer {
@@ -33,6 +33,9 @@ public:
   RingBuffer();
   ~RingBuffer();
   
+  // return the size of the buffer.
+  int size() const;
+
   // return the length remaining in the buffer
   int length() const;
   

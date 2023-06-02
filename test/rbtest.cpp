@@ -155,4 +155,14 @@ BOOST_AUTO_TEST_CASE( overfillDidntKeepUp )
 
 }
 
+BOOST_AUTO_TEST_CASE( bigBuf )
+{
+  cout << "=== bigBuf ===" << endl;
+  
+  RingBuffer buffer;
+
+  buffer.write("AAAAAAA;");
+  BOOST_CHECK_EQUAL(buffer.length(), 8);
+
+}
 

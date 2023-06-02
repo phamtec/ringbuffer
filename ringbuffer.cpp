@@ -30,6 +30,11 @@ void RingBuffer::checkWrite() {
 #endif
 
 RingBuffer::RingBuffer() {
+
+#ifdef RINGBUF_DEBUG
+  cout << "buf size " << size() << endl;
+#endif
+
   _readp = 0;
   _writep = 0;
   for (int i=0; i<sizeof(_buffer); i++) {
@@ -38,6 +43,10 @@ RingBuffer::RingBuffer() {
 }
 
 RingBuffer::~RingBuffer() {
+}
+
+int RingBuffer::size() const {
+  return sizeof(_buffer) - 1;
 }
 
 void RingBuffer::write(unsigned char c) {
